@@ -1,3 +1,4 @@
 module.exports = {
-    Note: require("./transaction"),
+    Transaction: require("./transaction"),
 };
+

@@ -5,6 +5,8 @@ const compression = require("compression");
 
 const PORT = 3000;
 
+const db = require("./models");
+
 const app = express();
 
 app.use(logger("dev"));
@@ -17,7 +19,8 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost/budget", {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useUnifiedTopology: true
 });
 
 // routes
@@ -26,3 +29,11 @@ app.use(require("./routes/api.js"));
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
+
+db.Transaction.create({ name: "test", value: 100 })
+  .then(transTest => {
+    console.log(transTest);
+  })
+  .catch(({ message }) => {
+    console.log(message);
+  });
