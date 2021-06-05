@@ -18,7 +18,7 @@ router.post("/api/transaction/bulk", ({body}, res) => {
     })
     .catch(err => {
       res.status(404).json(err);
-    });
+     });
 });
 
 router.get("/api/transaction", (req, res) => {
