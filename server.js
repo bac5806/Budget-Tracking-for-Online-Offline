@@ -29,11 +29,3 @@ app.use(require("./routes/api.js"));
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
-
-db.Transaction.create({ name: "test", value: 100 })
-  .then(transTest => {
-    console.log(transTest);
-  })
-  .catch(({ message }) => {
-    console.log(message);
-  });
