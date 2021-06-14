@@ -14,6 +14,6 @@ When brought back online:
 
   * Offline entries should be added to tracker.
 
-![alt text](assets/images/budget.png)
+![alt text](public/images/budget.png)
 
 Link: https://obscure-wave-23218.herokuapp.com/
